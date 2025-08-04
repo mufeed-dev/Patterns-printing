@@ -615,28 +615,50 @@
 
 
 // Butterfly-pattern
+// #include<stdio.h>
+// int main(){
+//     int n, l;
+//     printf("Enter the Number: ");
+//     scanf("%d",&n);
+//     for(int i=0; i<=n; i++){
+//          for(int j=-n;j<=n;j++){
+//              if((-n+i)<j&&j<(n-i))
+//                  printf("  ");
+//              else
+//                  printf("* ");
+//          }
+//          printf("\n");
+//      }
+//     for(int i=0; i<=n; i++){
+//         for(int j=-n;j<=n;j++){
+//             if(-i<j&&j<i)
+//             printf("  ");
+//             else
+//             printf("* ");
+//         }
+//         printf("\n");
+//     }
+//     return 0;
+// }
+
+
+
+
 #include<stdio.h>
 int main(){
     int n, l;
     printf("Enter the Number: ");
     scanf("%d",&n);
-    for(int i=0; i<=n; i++){
-         for(int j=-n;j<=n;j++){
-             if((-n+i)<j&&j<(n-i))
-                 printf("  ");
-             else
-                 printf("* ");
-         }
-         printf("\n");
-     }
-    for(int i=0; i<=n; i++){
-        for(int j=-n;j<=n;j++){
-            if(-i<j&&j<i)
-            printf("  ");
-            else
+    for(int i =1; i<=n;i++){
+        for(int j=1;j<=i;j++){
+        for(int j=1;j<=2*i;j++)
             printf("* ");
-        }
         printf("\n");
+        }
+
+        if(i==n) break;
+        for(int j=0;j<3;j++)
+        printf("*\n");
     }
     return 0;
 }
