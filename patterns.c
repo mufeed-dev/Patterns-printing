@@ -439,19 +439,41 @@
 
 
 // hollow pyramid/triangle
+// #include<stdio.h>
+// int main(){
+//     int n, l;
+//     printf("Enter the number: ");
+//     scanf("%d",&n);
+//     for(int i=0; i<n; i++){
+//         for(int s=0; s<n-i-1; s++)
+//             printf(" ");
+//         for(int j=0;j<i+1;j++){
+//             if(j==0||i==n-1||j==i)
+//                 printf("* ");
+//             else
+//                 printf("  ");
+//         }
+//         printf("\n");
+//     }
+//     return 0;
+// }
+
+
+
+// hollow diamond
 #include<stdio.h>
 int main(){
     int n, l;
     printf("Enter the number: ");
     scanf("%d",&n);
-    for(int i=0; i<n; i++){
-        for(int s=0; s<n-i-1; s++)
-            printf(" ");
-        for(int j=0;j<i+1;j++){
-            if(j==0||i==n-1||j==i)
-                printf("* ");
-            else
-                printf("  ");
+    for(int i=-n; i<=n; i++){
+        if(i<0) l = -i;
+        else l = i;
+        for(int s=0;s<l;s++)
+            printf("  ");
+        for(int j=0;j<2*(n-l)+1;j++){
+            if(j==0||j==2*(n-l)) printf("* ");
+            else printf("  ");
         }
         printf("\n");
     }
