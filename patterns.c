@@ -536,20 +536,47 @@
 
 
 // inverted-pascal-pyramid
+// #include<stdio.h>
+// int main(){
+//     int n, l;
+//     printf("Enter the number: ");
+//     scanf("%d",&n);
+//     for(int i=0; i<n; i++){
+//         for(int s=0; s<i; s++)
+//             printf(" ");
+//         for(int j=0;j<n-i;j++){
+//             if(j==0)
+//                 l=1;
+//             else
+//                 l = l*(n-i-j)/j;
+//             printf("%d ",l);
+//         }
+//         printf("\n");
+//     }
+//     return 0;
+// }
+
+
+
+// Diamond Number Cross
 #include<stdio.h>
 int main(){
     int n, l;
-    printf("Enter the number: ");
+    printf("Enter the Number: ");
     scanf("%d",&n);
     for(int i=0; i<n; i++){
-        for(int s=0; s<i; s++)
-            printf(" ");
-        for(int j=0;j<n-i;j++){
-            if(j==0)
-                l=1;
-            else
-                l = l*(n-i-j)/j;
-            printf("%d ",l);
+        for(int j=0;j<n;j++){
+            if(i==j){
+                if(n/2>=i)
+                printf("%d ",n-i);
+                else printf("%d ",i+1);
+            }
+            else if(n==i+j+1) {
+                if(i<=n/2) 
+                    printf("%d ",i+1);
+                else printf("%d ",j+1);
+            }
+            else printf("  ");
         }
         printf("\n");
     }
