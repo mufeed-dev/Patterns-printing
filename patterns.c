@@ -137,6 +137,27 @@
 
 
 // right arrow pattern
+// #include<stdio.h>
+// int main(){
+//     int n, l;
+//     printf("Enter the number: ");
+//     scanf("%d",&n);
+//     for(int i=-n; i<=n; i++){
+//         if(i<0) l = -i;
+//         else l = i;
+//         for(int j=0;j<n+1;j++){
+//             if(j<n-l)
+//                 printf("  ");
+//             else
+//                 printf("* ");
+//         }
+//         printf("\n");
+//     }
+//     return 0;
+// }
+
+
+// diamond star pattern
 #include<stdio.h>
 int main(){
     int n, l;
@@ -145,8 +166,8 @@ int main(){
     for(int i=-n; i<=n; i++){
         if(i<0) l = -i;
         else l = i;
-        for(int j=0;j<n+1;j++){
-            if(j<n-l)
+        for(int j=0;j<2*n-l+1;j++){
+            if(j<l)
                 printf("  ");
             else
                 printf("* ");
