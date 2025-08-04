@@ -280,6 +280,21 @@
 // }
 
 // Right-Aligned Letter Triangle
+// #include<stdio.h>
+// int main(){
+//     int n, l;
+//     printf("Enter the number: ");
+//     scanf("%d",&n);
+//     for(int i=0; i<n; i++){
+//         for(int j=0;j<i+1;j++){
+//             printf("%c ",'A'+i);
+//         }
+//         printf("\n");
+//     }
+//     return 0;
+// }
+
+
 #include<stdio.h>
 int main(){
     int n, l;
@@ -287,7 +302,7 @@ int main(){
     scanf("%d",&n);
     for(int i=0; i<n; i++){
         for(int j=0;j<i+1;j++){
-            printf("%c ",'A'+i);
+            printf("%c ",'A'+j);
         }
         printf("\n");
     }
