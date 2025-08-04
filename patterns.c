@@ -219,6 +219,25 @@
 
 
 // inverted-mirror-right-triangle
+// #include<stdio.h>
+// int main(){
+//     int n, l;
+//     printf("Enter the number: ");
+//     scanf("%d",&n);
+//     for(int i=0; i<n; i++){
+//         for(int j=0;j<n;j++){
+//             if(j<i)
+//                 printf("  ");
+//             else
+//                 printf("* ");
+//         }
+//         printf("\n");
+//     }
+//     return 0;
+// }
+
+
+// mirror-right-triangle
 #include<stdio.h>
 int main(){
     int n, l;
@@ -226,7 +245,7 @@ int main(){
     scanf("%d",&n);
     for(int i=0; i<n; i++){
         for(int j=0;j<n;j++){
-            if(j<i)
+            if(j<n-i-1)
                 printf("  ");
             else
                 printf("* ");
