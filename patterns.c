@@ -848,18 +848,41 @@
 
 
 // Tiered Exponential Burst Pattern
+// #include<stdio.h>
+// #include<math.h>
+// int main(){
+//     int n, l=0;
+//     printf("Enter the Number: ");
+//     scanf("%d",&n);
+//     for(int i =1; i<=n;i++){
+//         for(int j=1;j<=pow(2,i);j++)
+//             printf("* ");
+//         printf("\n");
+//         for(int j=1;j<=2*i-1;j++)
+//             printf("*\n");
+//     }
+//     return 0;
+// }
+
+
+// hollow-mirrorImage
 #include<stdio.h>
-#include<math.h>
 int main(){
-    int n, l=0;
-    printf("Enter the Number: ");
+    int n, l;
+    printf("Enter the number: ");
     scanf("%d",&n);
-    for(int i =1; i<=n;i++){
-        for(int j=1;j<=pow(2,i);j++)
-            printf("* ");
+    for(int i=-n; i<=n; i++){
+        if(i<0) l = -i;
+        else l = i;
+        for(int s=0; s<n-l;s++)
+            printf("  ");
+        for(int j=0;j<2*l+1;j++){
+            if(j==0||i==-n||i==n||j==2*l)
+                printf("* ");
+            else
+                printf("  ");
+        }
         printf("\n");
-        for(int j=1;j<=2*i-1;j++)
-            printf("*\n");
     }
     return 0;
 }
