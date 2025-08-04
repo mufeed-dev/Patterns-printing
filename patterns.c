@@ -790,20 +790,38 @@
 // }
 
 
+// Pulse-Train Diamond Pattern
+// #include<stdio.h>
+// int main(){
+//     int n, l;
+//     printf("Enter the Number: ");
+//     scanf("%d",&n);
+//     for(int i =1; i<=n;i++){
+//         for(int j=1;j<=i;j++)
+//             printf("*\n");
+//         if(i==n) break;
+//         for(int j=1;j<=4*i;j++){
+//             printf("* ");
+//         }
+//         printf("\n");
+//     }
+//     return 0;
+// }
 
+
+// Descending Sawtooth Wave
 #include<stdio.h>
 int main(){
     int n, l;
     printf("Enter the Number: ");
     scanf("%d",&n);
     for(int i =1; i<=n;i++){
-        for(int j=1;j<=i;j++)
-            printf("*\n");
-        if(i==n) break;
-        for(int j=1;j<=4*i;j++){
+        for(int j=1;j<=(n-i+1)*2;j++)
             printf("* ");
-        }
         printf("\n");
+        for(int j=1;j<=i;j++){
+            printf("*\n");
+        }
     }
     return 0;
 }
