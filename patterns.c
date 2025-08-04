@@ -586,20 +586,40 @@
 
 
 // hollow diamond star covered
+// #include<stdio.h>
+// int main(){
+//     int n, l;
+//     printf("Enter the Number: ");
+//     scanf("%d",&n);
+//     for(int i=0; i<=n; i++){
+//         for(int j=-n;j<=n;j++){
+//             if(-i<j&&j<i)
+//             printf("  ");
+//             else
+//             printf("* ");
+//         }
+//         printf("\n");
+//     }
+//     for(int i=0; i<=n; i++){
+//          for(int j=-n;j<=n;j++){
+//              if((-n+i)<j&&j<(n-i))
+//                  printf("  ");
+//              else
+//                  printf("* ");
+//          }
+//          printf("\n");
+//      }
+//     return 0;
+// }
+
+
+
+// Butterfly-pattern
 #include<stdio.h>
 int main(){
     int n, l;
     printf("Enter the Number: ");
     scanf("%d",&n);
-    for(int i=0; i<=n; i++){
-        for(int j=-n;j<=n;j++){
-            if(-i<j&&j<i)
-            printf("  ");
-            else
-            printf("* ");
-        }
-        printf("\n");
-    }
     for(int i=0; i<=n; i++){
          for(int j=-n;j<=n;j++){
              if((-n+i)<j&&j<(n-i))
@@ -609,7 +629,14 @@ int main(){
          }
          printf("\n");
      }
+    for(int i=0; i<=n; i++){
+        for(int j=-n;j<=n;j++){
+            if(-i<j&&j<i)
+            printf("  ");
+            else
+            printf("* ");
+        }
+        printf("\n");
+    }
     return 0;
 }
-
-
