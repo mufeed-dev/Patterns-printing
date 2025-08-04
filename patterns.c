@@ -365,18 +365,49 @@
 // }
 
 
-// X-start pattern
+// X-star pattern
+// #include<stdio.h>
+// int main(){
+//     int n, l;
+//     printf("Enter the number: ");
+//     scanf("%d",&n);
+//     for(int i=0; i<n; i++){
+//         for(int j=0;j<n;j++){
+//             if((j==i)||(n==j+i+1))
+//                 printf("* ");
+//             else
+//                 printf("  ");
+//         }
+//         printf("\n");
+//     }
+//     return 0;
+// }
+
+
+// X-Shaped Letter Mirror
 #include<stdio.h>
 int main(){
     int n, l;
-    printf("Enter the number: ");
-    scanf("%d",&n);
-    for(int i=0; i<n; i++){
-        for(int j=0;j<n;j++){
-            if((j==i)||(n==j+i+1))
-                printf("* ");
-            else
-                printf("  ");
+    char str[20];
+    printf("Enter the String: ");
+    scanf("%s",&str);
+    for(l=0; str[l]; l++);
+    n=l;
+    for(int i=0; i<l; i++){
+        for(int j=0;j<l;j++){
+            if(i==j){
+                printf("%c ",str[i]);
+                if(l/2==i)
+                n--;
+            }
+            else if(l==i+j+1) {
+                if(i!=j) {
+                    printf("%c ",str[n-1]);
+                    n--;
+                }
+                else n--;
+            }
+            else printf("  ");
         }
         printf("\n");
     }
