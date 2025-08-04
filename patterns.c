@@ -999,6 +999,23 @@
 
 
 // Double-Aligned Diamond Pattern
+// #include<stdio.h>
+// int main(){
+//     int n, l;
+//     printf("Enter the number: ");
+//     scanf("%d",&n);
+//     for(int i=-n; i<=n; i++){
+//         l = (i<0) ? -i: i;
+//         for(int j=0;j<n-l+1;j++)
+//             printf("* ");
+//         printf("\n");
+//     }
+//     return 0;
+// }
+
+
+
+
 #include<stdio.h>
 int main(){
     int n, l;
@@ -1006,8 +1023,10 @@ int main(){
     scanf("%d",&n);
     for(int i=-n; i<=n; i++){
         l = (i<0) ? -i: i;
-        for(int j=0;j<n-l+1;j++)
-            printf("* ");
+        for(int j=0;j<n-l+1;j++){
+            if(j%2!=0) printf("^* ");
+            else printf("* ");
+        }
         printf("\n");
     }
     return 0;
