@@ -810,18 +810,38 @@
 
 
 // Descending Sawtooth Wave
+// #include<stdio.h>
+// int main(){
+//     int n, l;
+//     printf("Enter the Number: ");
+//     scanf("%d",&n);
+//     for(int i =1; i<=n;i++){
+//         for(int j=1;j<=(n-i+1)*2;j++)
+//             printf("* ");
+//         printf("\n");
+//         for(int j=1;j<=i;j++){
+//             printf("*\n");
+//         }
+//     }
+//     return 0;
+// }
+
+
+//  Fractal Pulse Cascade
 #include<stdio.h>
 int main(){
-    int n, l;
+    int n, l=0;
     printf("Enter the Number: ");
     scanf("%d",&n);
     for(int i =1; i<=n;i++){
-        for(int j=1;j<=(n-i+1)*2;j++)
+        l++;
+        if(i%2==1) printf("*\n");
+        else printf("*\n*\n");
+        if(l>3) l=1;
+        if(i==n) break;
+        for(int j=1;j<=((l==3)?10:4*l);j++)
             printf("* ");
         printf("\n");
-        for(int j=1;j<=i;j++){
-            printf("*\n");
-        }
     }
     return 0;
 }
