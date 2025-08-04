@@ -559,26 +559,57 @@
 
 
 // Diamond Number Cross
+// #include<stdio.h>
+// int main(){
+//     int n, l;
+//     printf("Enter the Number: ");
+//     scanf("%d",&n);
+//     for(int i=0; i<n; i++){
+//         for(int j=0;j<n;j++){
+//             if(i==j){
+//                 if(n/2>=i)
+//                 printf("%d ",n-i);
+//                 else printf("%d ",i+1);
+//             }
+//             else if(n==i+j+1) {
+//                 if(i<=n/2) 
+//                     printf("%d ",i+1);
+//                 else printf("%d ",j+1);
+//             }
+//             else printf("  ");
+//         }
+//         printf("\n");
+//     }
+//     return 0;
+// }
+
+
+
+// hollow diamond star covered
 #include<stdio.h>
 int main(){
     int n, l;
     printf("Enter the Number: ");
     scanf("%d",&n);
-    for(int i=0; i<n; i++){
-        for(int j=0;j<n;j++){
-            if(i==j){
-                if(n/2>=i)
-                printf("%d ",n-i);
-                else printf("%d ",i+1);
-            }
-            else if(n==i+j+1) {
-                if(i<=n/2) 
-                    printf("%d ",i+1);
-                else printf("%d ",j+1);
-            }
-            else printf("  ");
+    for(int i=0; i<=n; i++){
+        for(int j=-n;j<=n;j++){
+            if(-i<j&&j<i)
+            printf("  ");
+            else
+            printf("* ");
         }
         printf("\n");
     }
+    for(int i=0; i<=n; i++){
+         for(int j=-n;j<=n;j++){
+             if((-n+i)<j&&j<(n-i))
+                 printf("  ");
+             else
+                 printf("* ");
+         }
+         printf("\n");
+     }
     return 0;
 }
+
+
