@@ -962,24 +962,39 @@
 
 
 
+// Alternating Case Diagonal Letter Triangle
+// #include<stdio.h>
+// int main(){
+//     int n, l=1;
+//     printf("Enter the number: ");
+//     scanf("%d",&n);
+//     for(int i=0; i<n; i++){
+//         for(int j=0;j<i+1;j++){
+//             if(l%2==0)
+//                 printf("%c ",'A'+l-1);
+//             else printf("%c ",'a'+l-1);
+//             l++;
+//         }
+//         printf("\n");
+//     }
+//     return 0;
+// }
 
+// Asymmetric Diamond Pulse Pattern
 #include<stdio.h>
 int main(){
     int n, l=1;
     printf("Enter the number: ");
     scanf("%d",&n);
-    for(int i=0; i<n; i++){
-        for(int j=0;j<i+1;j++){
-            if(l%2==0)
-                printf("%c ",'A'+l-1);
-            else printf("%c ",'a'+l-1);
-            l++;
-        }
+    for(int i=1; i<=n; i++){
+        for(int j=1;j<=2*n+1-2*i;j++)
+            printf("* ");
+        printf("\n");
+        for(int j=1; j<=i;j++)
+            printf("* ");
         printf("\n");
     }
     return 0;
 }
-
-
 
 
