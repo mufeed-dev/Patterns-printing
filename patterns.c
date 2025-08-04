@@ -417,6 +417,28 @@
 
 
 // Pascal pattern-pyramid
+// #include<stdio.h>
+// int main(){
+//     int n, l;
+//     printf("Enter the number: ");
+//     scanf("%d",&n);
+//     for(int i=0; i<n; i++){
+//         for(int s=0; s<n-i-1; s++)
+//             printf(" ");
+//         for(int j=0;j<i+1;j++){
+//             if(j==0)
+//                 l=1;
+//             else
+//                 l = l*(i-j+1)/j;
+//             printf("%d ",l);
+//         }
+//         printf("\n");
+//     }
+//     return 0;
+// }
+
+
+// hollow pyramid/triangle
 #include<stdio.h>
 int main(){
     int n, l;
@@ -426,11 +448,10 @@ int main(){
         for(int s=0; s<n-i-1; s++)
             printf(" ");
         for(int j=0;j<i+1;j++){
-            if(j==0)
-                l=1;
+            if(j==0||i==n-1||j==i)
+                printf("* ");
             else
-                l = l*(i-j+1)/j;
-            printf("%d ",l);
+                printf("  ");
         }
         printf("\n");
     }
