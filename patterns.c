@@ -513,21 +513,44 @@
 
 
 // snake pattern
+// #include<stdio.h>
+// int main(){
+//     int n, l=0;
+//     printf("Enter the number: ");
+//     scanf("%d",&n);
+//     for(int i=0; i<n; i++){
+//         for(int j=0; j<n; j++){
+//             if(i%2==0){
+//                 l++;
+//                 printf("%d ",l);
+//             }
+//             else
+//                 printf("%d ",l--);
+//         }
+//         l+=n;
+//         printf("\n");
+//     }
+//     return 0;
+// }
+
+
+
+// inverted-pascal-pyramid
 #include<stdio.h>
 int main(){
-    int n, l=0;
+    int n, l;
     printf("Enter the number: ");
     scanf("%d",&n);
     for(int i=0; i<n; i++){
-        for(int j=0; j<n; j++){
-            if(i%2==0){
-                l++;
-                printf("%d ",l);
-            }
+        for(int s=0; s<i; s++)
+            printf(" ");
+        for(int j=0;j<n-i;j++){
+            if(j==0)
+                l=1;
             else
-                printf("%d ",l--);
+                l = l*(n-i-j)/j;
+            printf("%d ",l);
         }
-        l+=n;
         printf("\n");
     }
     return 0;
