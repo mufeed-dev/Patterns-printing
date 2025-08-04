@@ -461,19 +461,48 @@
 
 
 // hollow diamond
+// #include<stdio.h>
+// int main(){
+//     int n, l;
+//     printf("Enter the number: ");
+//     scanf("%d",&n);
+//     for(int i=-n; i<=n; i++){
+//         if(i<0) l = -i;
+//         else l = i;
+//         for(int s=0;s<l;s++)
+//             printf("  ");
+//         for(int j=0;j<2*(n-l)+1;j++){
+//             if(j==0||j==2*(n-l)) printf("* ");
+//             else printf("  ");
+//         }
+//         printf("\n");
+//     }
+//     return 0;
+// }
+
+
+
+// concentric pattern
 #include<stdio.h>
 int main(){
     int n, l;
     printf("Enter the number: ");
     scanf("%d",&n);
-    for(int i=-n; i<=n; i++){
-        if(i<0) l = -i;
-        else l = i;
-        for(int s=0;s<l;s++)
-            printf("  ");
-        for(int j=0;j<2*(n-l)+1;j++){
-            if(j==0||j==2*(n-l)) printf("* ");
-            else printf("  ");
+    for(int i=1; i<=2*n-1; i++){
+        l=n;
+        if(i<=n) {
+            for(int j=1;j<=2*n-1;j++){
+                printf("%d ",l);
+                if(i>j) l--;
+                if((i+j)>=(2*n)) l++;
+            }
+        }
+        else {
+            for(int j=1;j<=2*n-1;j++){
+                printf("%d ",l);
+                if((i+j)<(2*n)) l--;
+                if(i<=j) l++;
+            }
         }
         printf("\n");
     }
