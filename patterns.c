@@ -711,23 +711,42 @@
 
 
 
+// Peak-Centered Number Pyramid
+// #include<stdio.h>
+// int main(){
+//     int n, l;
+//     printf("Enter the Number: ");
+//     scanf("%d",&n);
+//     for(int i =0; i<n;i++){
+//         l=i+1;
+//         for(int s=0;s<n-i-1;s++)
+//             printf("  ");
+//         for(int j=0;j<2*i+1;j++){
+//             if(i>j)
+//                 printf("%d ",l++);
+//             else 
+//                 printf("%d ",l--);
+//         }
+//         printf("\n");
+//     }
+//     return 0;
+// }
+
+
+
 
 #include<stdio.h>
 int main(){
     int n, l;
     printf("Enter the Number: ");
     scanf("%d",&n);
-    for(int i =0; i<n;i++){
-        l=i+1;
-        for(int s=0;s<n-i-1;s++)
-            printf("  ");
-        for(int j=0;j<2*i+1;j++){
-            if(i>j)
-                printf("%d ",l++);
-            else 
-                printf("%d ",l--);
-        }
+    for(int i =1; i<=n;i++){
+        for(int j=1;j<=2*i;j++)
+            printf("* ");
         printf("\n");
+        if(i==n) break;
+        for(int j=1;j<=2*i+1;j++)
+            printf("*\n");
     }
     return 0;
 }
