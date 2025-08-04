@@ -1093,6 +1093,24 @@
 
 
 // hollow square with '/'
+// #include<stdio.h>
+// int main(){
+//     int n, l;
+//     printf("Enter the number: ");
+//     scanf("%d",&n);
+//     for(int i=0; i<n; i++){
+//         for(int j=0;j<n;j++){
+//             if(i==0||i==n-1||j==0||j==n-1||n==i+j+1) 
+//                 printf("* ");
+//             else printf("  ");
+//         }
+//         printf("\n");
+//     }
+//     return 0;
+// }
+
+
+// hollow square with 'X'
 #include<stdio.h>
 int main(){
     int n, l;
@@ -1100,7 +1118,7 @@ int main(){
     scanf("%d",&n);
     for(int i=0; i<n; i++){
         for(int j=0;j<n;j++){
-            if(i==0||i==n-1||j==0||j==n-1||n==i+j+1) 
+            if(i==0||i==n-1||j==0||j==n-1||i==j||n==i+j+1) 
                 printf("* ");
             else printf("  ");
         }
