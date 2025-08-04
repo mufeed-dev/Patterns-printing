@@ -1015,20 +1015,41 @@
 
 
 
+// ^*
+// #include<stdio.h>
+// int main(){
+//     int n, l;
+//     printf("Enter the number: ");
+//     scanf("%d",&n);
+//     for(int i=-n; i<=n; i++){
+//         l = (i<0) ? -i: i;
+//         for(int j=0;j<n-l+1;j++){
+//             if(j%2!=0) printf("^* ");
+//             else printf("* ");
+//         }
+//         printf("\n");
+//     }
+//     return 0;
+// }
 
+
+// Adjacent Right Triangles Pattern
 #include<stdio.h>
 int main(){
     int n, l;
     printf("Enter the number: ");
     scanf("%d",&n);
-    for(int i=-n; i<=n; i++){
-        l = (i<0) ? -i: i;
-        for(int j=0;j<n-l+1;j++){
-            if(j%2!=0) printf("^* ");
-            else printf("* ");
-        }
+    for(int i=0; i<n; i++){
+        for(int j=0;j<i+1;j++)
+            printf("* ");
+        printf("\n");
+    }
+    for(int i=0; i<n; i++){
+        for(int j=0;j<n-i;j++)
+            printf("* ");
         printf("\n");
     }
     return 0;
 }
+
 
