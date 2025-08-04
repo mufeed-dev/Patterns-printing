@@ -941,21 +941,41 @@
 
 
 // Tiered Pulse-Stair Pattern
+// #include<stdio.h>
+// int main(){
+//     int n, l;
+//     printf("Enter the number: ");
+//     scanf("%d",&n);
+//     for(int i=1; i<=n; i++){
+//         for(int j=1; j<=2*i-1;j++)
+//             printf("* ");
+//         printf("\n");
+//         if(i==n) break;
+//         for(int j=1; j<=i;j++){
+//             for(int j=1; j<=i;j++)
+//                 printf("* ");
+//             printf("\n");
+//         }
+//     }
+//     return 0;
+// }
+
+
+
+
 #include<stdio.h>
 int main(){
-    int n, l;
+    int n, l=1;
     printf("Enter the number: ");
     scanf("%d",&n);
-    for(int i=1; i<=n; i++){
-        for(int j=1; j<=2*i-1;j++)
-            printf("* ");
-        printf("\n");
-        if(i==n) break;
-        for(int j=1; j<=i;j++){
-            for(int j=1; j<=i;j++)
-                printf("* ");
-            printf("\n");
+    for(int i=0; i<n; i++){
+        for(int j=0;j<i+1;j++){
+            if(l%2==0)
+                printf("%c ",'A'+l-1);
+            else printf("%c ",'a'+l-1);
+            l++;
         }
+        printf("\n");
     }
     return 0;
 }
