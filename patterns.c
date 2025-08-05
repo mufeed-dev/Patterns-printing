@@ -1146,15 +1146,37 @@
 
 
 // Alternating Alpha-Numeric Step Pyramid
+// #include<stdio.h>
+// int main(){
+//     int n, l=0;
+//     printf("Enter the number: ");
+//     scanf("%d",&n);
+//     for(int i=0; i<n; i++){
+//        for(int j=0; j<i+1;j++) {
+//             if(i%2==0){
+//                 printf("%c ",'A'+l);
+//             }
+//             else printf("%d ",l);
+//        }
+//        if(i%2==0) l++;
+//         printf("\n");
+//     }
+//     return 0;
+// }
+
+
+
+
+// Interleaved Ascending Alpha-Numeric Pyramid
 #include<stdio.h>
 int main(){
-    int n, l=0;
+    int n, l=0,s=0;
     printf("Enter the number: ");
     scanf("%d",&n);
     for(int i=0; i<n; i++){
        for(int j=0; j<i+1;j++) {
             if(i%2==0){
-                printf("%c ",'A'+l);
+                printf("%c ",'A'+l+s++);
             }
             else printf("%d ",l);
        }
