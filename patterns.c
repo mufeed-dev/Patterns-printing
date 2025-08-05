@@ -1130,16 +1130,38 @@
 
 
 // Right-Aligned Odd Number Triangle
+// #include<stdio.h>
+// int main(){
+//     int n, l;
+//     printf("Enter the number: ");
+//     scanf("%d",&n);
+//     for(int i=0; i<n; i++){
+//        for(int j=0; j<n-i;j++)
+//         printf("%d ",1+2*j);
+//         printf("\n");
+//     }
+//     return 0;
+// }
+
+
+
+// Alternating Alpha-Numeric Step Pyramid
 #include<stdio.h>
 int main(){
-    int n, l;
+    int n, l=0;
     printf("Enter the number: ");
     scanf("%d",&n);
     for(int i=0; i<n; i++){
-       for(int j=0; j<n-i;j++)
-        printf("%d ",1+2*j);
+       for(int j=0; j<i+1;j++) {
+            if(i%2==0){
+                printf("%c ",'A'+l);
+            }
+            else printf("%d ",l);
+       }
+       if(i%2==0) l++;
         printf("\n");
     }
     return 0;
 }
+
 
