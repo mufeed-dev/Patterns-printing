@@ -1168,19 +1168,40 @@
 
 
 // Interleaved Ascending Alpha-Numeric Pyramid
+// #include<stdio.h>
+// int main(){
+//     int n, l=0,s=0;
+//     printf("Enter the number: ");
+//     scanf("%d",&n);
+//     for(int i=0; i<n; i++){
+//        for(int j=0; j<i+1;j++) {
+//             if(i%2==1){
+//                 printf("%d ",'A'+l+s++);
+//             }
+//             else printf("%d ",l);
+//        }
+//        if(i%2==0) l++;
+//         printf("\n");
+//     }
+//     return 0;
+// }
+
+
+// snake-right-trinagle
 #include<stdio.h>
 int main(){
-    int n, l=0,s=0;
+    int n, l,num=1;
     printf("Enter the number: ");
     scanf("%d",&n);
-    for(int i=0; i<n; i++){
-       for(int j=0; j<i+1;j++) {
-            if(i%2==0){
-                printf("%c ",'A'+l+s++);
+    for(int i=1; i<=n; i++){
+        l = num;
+       for(int j=1; j<=i;j++) {
+            if(i%2==1){
+                printf("%d ",l++);
             }
-            else printf("%d ",l);
+            else printf("%d ",l+i-j);
        }
-       if(i%2==0) l++;
+       num+=i;
         printf("\n");
     }
     return 0;
