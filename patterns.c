@@ -1188,23 +1188,41 @@
 
 
 // snake-right-trinagle
+// #include<stdio.h>
+// int main(){
+//     int n, l,num=1;
+//     printf("Enter the number: ");
+//     scanf("%d",&n);
+//     for(int i=1; i<=n; i++){
+//         l = num;
+//        for(int j=1; j<=i;j++) {
+//             if(i%2==1){
+//                 printf("%d ",l++);
+//             }
+//             else printf("%d ",l+i-j);
+//        }
+//        num+=i;
+//         printf("\n");
+//     }
+//     return 0;
+// }
+
+
+
+// Partial String Triangle with Repetition
 #include<stdio.h>
 int main(){
     int n, l,num=1;
-    printf("Enter the number: ");
-    scanf("%d",&n);
-    for(int i=1; i<=n; i++){
-        l = num;
-       for(int j=1; j<=i;j++) {
-            if(i%2==1){
-                printf("%d ",l++);
-            }
-            else printf("%d ",l+i-j);
+    char str[20];
+    printf("Enter the String: ");
+    scanf("%s",&str);
+    for(l=0; str[l]; l++);
+    for(int i=0; i<l; i++){
+       for(int j=0; j<i+1;j++) {
+            printf("%c ",str[j]);
        }
-       num+=i;
         printf("\n");
     }
     return 0;
 }
-
 
