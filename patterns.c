@@ -1289,23 +1289,50 @@
 
 
 // Palindromic Diamond Number Pattern
+// #include<stdio.h>
+// int main(){
+//     int n, l;
+//     printf("Enter the number: ");
+//     scanf("%d",&n);
+//     for(int i=-n; i<=n; i++){
+//         if(i<0) l = -i;
+//         else l = i;
+//         for(int s=0;s<l;s++)
+//             printf("  ");
+//         for(int j=0;j<2*(n-l)+1;j++){
+//             if(j <= (n-l))
+//                 printf("%d ", j+1);
+//             else
+//                 printf("%d ", 2*(n-l)-j+1);
+//         }
+//         printf("\n");
+//     }
+//     return 0;
+// }
+
+
+
+// Mirrored Descending-Ascending Number Diamond
 #include<stdio.h>
 int main(){
-    int n, l;
+    int n, l, num;
     printf("Enter the number: ");
     scanf("%d",&n);
     for(int i=-n; i<=n; i++){
+        num = n+1;
         if(i<0) l = -i;
         else l = i;
         for(int s=0;s<l;s++)
             printf("  ");
         for(int j=0;j<2*(n-l)+1;j++){
-            if(j <= (n-l))
-                printf("%d ", j+1);
+            if(j < (n-l))
+                printf("%d ", num--);
             else
-                printf("%d ", 2*(n-l)-j+1);
+                printf("%d ", num++);
         }
         printf("\n");
     }
     return 0;
 }
+
+
