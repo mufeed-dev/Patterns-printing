@@ -1265,24 +1265,47 @@
 
 
 // Numbered Vertical Bar
+// #include<stdio.h>
+// int main(){
+//     int n,l;
+//     printf("Enter the number: ");
+//     scanf("%d",&n);
+//     n+=2;
+//     for(int i=0; i<n; i++){
+//         if(i==0||i==n-1) printf("* * *");
+//         else{
+//             for(int j=0; j<3;j++){
+//                 if(j==1)
+//                     printf("%d ",i);
+//                 else 
+//                     printf("* ");
+//             }
+//         }
+//     printf("\n");
+//     }
+//     return 0;
+// }
+
+
+
+// Palindromic Diamond Number Pattern
 #include<stdio.h>
 int main(){
-    int n,l;
+    int n, l;
     printf("Enter the number: ");
     scanf("%d",&n);
-    n+=2;
-    for(int i=0; i<n; i++){
-        if(i==0||i==n-1) printf("* * *");
-        else{
-            for(int j=0; j<3;j++){
-                if(j==1)
-                    printf("%d ",i);
-                else 
-                    printf("* ");
-            }
+    for(int i=-n; i<=n; i++){
+        if(i<0) l = -i;
+        else l = i;
+        for(int s=0;s<l;s++)
+            printf("  ");
+        for(int j=0;j<2*(n-l)+1;j++){
+            if(j <= (n-l))
+                printf("%d ", j+1);
+            else
+                printf("%d ", 2*(n-l)-j+1);
         }
-    printf("\n");
+        printf("\n");
     }
     return 0;
 }
-
