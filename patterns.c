@@ -1168,23 +1168,23 @@
 
 
 // Interleaved Ascending Alpha-Numeric Pyramid
-// #include<stdio.h>
-// int main(){
-//     int n, l=0,s=0;
-//     printf("Enter the number: ");
-//     scanf("%d",&n);
-//     for(int i=0; i<n; i++){
-//        for(int j=0; j<i+1;j++) {
-//             if(i%2==1){
-//                 printf("%d ",'A'+l+s++);
-//             }
-//             else printf("%d ",l);
-//        }
-//        if(i%2==0) l++;
-//         printf("\n");
-//     }
-//     return 0;
-// }
+#include<stdio.h>
+int main(){
+    int n, l=0,s=0;
+    printf("Enter the number: ");
+    scanf("%d",&n);
+    for(int i=0; i<n; i++){
+       for(int j=0; j<i+1;j++) {
+            if(i%2==0){
+                printf("%c ",'A'+l+s++);
+            }
+            else printf("%d ",l);
+       }
+       if(i%2==0) l++;
+        printf("\n");
+    }
+    return 0;
+}
 
 
 // snake-right-trinagle
@@ -1313,26 +1313,26 @@
 
 
 // Mirrored Descending-Ascending Number Diamond
-#include<stdio.h>
-int main(){
-    int n, l, num;
-    printf("Enter the number: ");
-    scanf("%d",&n);
-    for(int i=-n; i<=n; i++){
-        num = n+1;
-        if(i<0) l = -i;
-        else l = i;
-        for(int s=0;s<l;s++)
-            printf("  ");
-        for(int j=0;j<2*(n-l)+1;j++){
-            if(j < (n-l))
-                printf("%d ", num--);
-            else
-                printf("%d ", num++);
-        }
-        printf("\n");
-    }
-    return 0;
-}
+// #include<stdio.h>
+// int main(){
+//     int n, l, num;
+//     printf("Enter the number: ");
+//     scanf("%d",&n);
+//     for(int i=-n; i<=n; i++){
+//         num = n+1;
+//         if(i<0) l = -i;
+//         else l = i;
+//         for(int s=0;s<l;s++)
+//             printf("  ");
+//         for(int j=0;j<2*(n-l)+1;j++){
+//             if(j < (n-l))
+//                 printf("%d ", num--);
+//             else
+//                 printf("%d ", num++);
+//         }
+//         printf("\n");
+//     }
+//     return 0;
+// }
 
 
